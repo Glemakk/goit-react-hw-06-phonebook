@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
-import { connect } from 'react-redux'
-import * as actions from './redux/actions/phoneBook-actions'
-import { ToastContainer, toast } from 'react-toastify'
+// import { useState, useEffect } from 'react'
+// import { connect } from 'react-redux'
+// import * as actions from './redux/actions/explain-actions'
+import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 import ContactForm from './components/ContactForm'
@@ -11,30 +11,30 @@ import Container from './components/Container'
 // import { v4 as uuidv4 } from 'uuid'
 
 const App = () => {
-  const [contacts, setContacts] = useState(
-    () => JSON.parse(window.localStorage.getItem('contacts')) ?? [],
-  )
-  // const [filter, setFilter] = useState('')
+  // const [contacts, setContacts] = useState(
+  //   () => JSON.parse(window.localStorage.getItem('contacts')) ?? [],
+  // )
+  // // const [filter, setFilter] = useState('')
 
-  useEffect(() => {
-    window.localStorage.setItem('contacts', JSON.stringify(contacts))
-  }, [contacts])
+  // useEffect(() => {
+  //   window.localStorage.setItem('contacts', JSON.stringify(contacts))
+  // }, [contacts])
 
-  const handleChange = ({ currentTarget }) => {
-    const value = currentTarget.value
-    const name = currentTarget.name
+  // const handleChange = ({ currentTarget }) => {
+  //   const value = currentTarget.value
+  //   const name = currentTarget.name
 
-    // switch (name) {
-    //   case 'contacts':
-    //     setContacts(value)
-    //     break
-    //   case 'filter':
-    //     setFilter(value)
-    //     break
-    //   default:
-    //     return
-    // }
-  }
+  //   switch (name) {
+  //     case 'contacts':
+  //       setContacts(value)
+  //       break
+  //     case 'filter':
+  //       setFilter(value)
+  //       break
+  //     default:
+  //       return
+  //   }
+  // }
 
   // const handleSubmit = (name, number) => {
   //   const randomID = uuidv4()
@@ -66,7 +66,7 @@ const App = () => {
       <ContactForm />
 
       <h2>Contacts</h2>
-      <Filter onChange={handleChange} />
+      <Filter />
       <ContactList />
       <ToastContainer position="top-center" autoClose={2000} />
     </Container>

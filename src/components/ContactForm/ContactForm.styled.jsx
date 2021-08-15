@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 
-export const Form = styled.form`background - color: #fff;
-padding: 15px;`
+export const Form = styled.form`
+  padding: 15px;
+`
 
 export const InputDiv = styled.div`
   display: flex;
@@ -16,4 +17,5 @@ export const Input = styled.input`
   &:hover {
     border-color: #00adffa8;
     outline: none;
-    transition: border-color 350ms cubic-bezier(0.4, 0, 0.2, 1);`
+    transition: border-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+`

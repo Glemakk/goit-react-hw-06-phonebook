@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addItem } from '../../redux/actions/item'
+// import { ToastContainer, toast } from 'react-toastify'
 import { v4 as uuidv4 } from 'uuid'
 
 import { FcPhoneAndroid, FcBusinessContact } from 'react-icons/fc'
@@ -44,7 +45,6 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, number)
     const randomID = uuidv4()
     const newContact = { id: randomID, name, number }
     dispatch(addItem(newContact))

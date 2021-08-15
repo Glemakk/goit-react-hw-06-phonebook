@@ -1,14 +1,16 @@
-import { ITEM_ADD, ITEM_DELETE } from '../types/phoneBook-types'
-// import ITEM_DELETE from '../types/phoneBook-types'
-console.log('ITEM_ADD, ITEM_DELETE >>', ITEM_ADD, ITEM_DELETE)
-console.log('ADD_ITEM >>', ITEM_ADD)
+// import { ITEM_ADD, ITEM_DELETE } from '../types/phoneBook-types'
+import { createAction } from '@reduxjs/toolkit'
 
-export const addItem = (formData) => ({
-  type: ITEM_ADD,
-  payload: formData,
-})
+export const addItem = createAction('ITEM_ADD')
+// export const addItem = (formData) => ({
+//   type: ITEM_ADD,
+//   payload: formData,
+// })
 
-export const deleteItem = (id) => ({
-  type: ITEM_DELETE,
-  payload: id,
-})
+export const deleteItem = createAction('ITEM_DELETE')
+// export const deleteItem = (id) => ({
+//   type: ITEM_DELETE,
+//   payload: id,
+// })
+
+// console.log(addItem(555))
